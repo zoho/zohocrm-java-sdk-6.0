@@ -100,7 +100,8 @@ Java SDK is available through Maven distribution. You can include the SDK to you
         implementation 'com.zoho.crm:zohocrmsdk-6-0:1.0.0'
     }
      ```
-
+3. [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrmsdk-6-0/1.0.0/zohocrmsdk-6-0-1.0.0.jar)
+   
 ### Dependency JARs
 
 [commons-lang3-3.9.jar](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3/3.9)
