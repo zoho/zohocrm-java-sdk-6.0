@@ -24,6 +24,9 @@ License
     limitations under the License.
 
 ## Latest Version
+- [3.0.0](/versions/3.0.0/README.md)
+   - Added new moveAttachmentsTo field in LeadConverter class.
+   - Added new id and name param in GetDownloadAttachmentsDetailsParam class.
 
 - [2.0.0](/versions/2.0.0/README.md)
   - Changed favorite field datatype in CustomViews.
@@ -57,10 +60,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-6.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/2.0.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-6-0/2.0.0/zohocrm-java-sdk-6-0-2.0.0.jar)
+- [Gradle](/versions/3.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-6-0/3.0.0/zohocrm-java-sdk-6-0-3.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-6.0/releases/tag/2.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-6.0/releases/tag/3.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -73,7 +76,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-6.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-6-0</artifactId>
-            <version>2.0.0</version>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -93,4 +96,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/2.0.0/README.md).
+For more details, kindly refer [here](/versions/3.0.0/README.md).
