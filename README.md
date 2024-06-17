@@ -31,7 +31,7 @@ License
     - Record FileDetails id field datatype changed(Long to String).
     - Added new fields (createdTimeS, modifiedTimeS, createdByS, ownerS, and modifiedByS) in Record FileDetails class.
     - Record ImageUpload id field datatype changed(Long to String).
-    - Record multi_user_lookup type fields datatype changed(List<MinifiedUser> to List<Record>).
+    - Record multi_user_lookup type fields datatype changed(List&lt;MinifiedUser&gt; to List&lt;Record&gt;).
     - Added new type and ownerId param in EmailRelatedRecordsOperations class constructor.
 
 - [3.0.0](/versions/3.0.0/README.md)
