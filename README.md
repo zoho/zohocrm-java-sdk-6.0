@@ -24,6 +24,16 @@ License
     limitations under the License.
 
 ## Latest Version
+- [4.0.0](/versions/4.0.0/README.md)
+    - Blueprint Transition percentPartialSave field datatype changed(Integer to Double).
+    - Blueprint Field convertMapping field datatype changed(ConvertMapping to Map).
+    - Handled Record Field API Name and datatype.
+    - Record FileDetails id field datatype changed(Long to String).
+    - Added new fields (createdTimeS, modifiedTimeS, createdByS, ownerS, and modifiedByS) in Record FileDetails class.
+    - Record ImageUpload id field datatype changed(Long to String).
+    - Record multi_user_lookup type fields datatype changed(List<MinifiedUser> to List<Record>).
+    - Added new type and ownerId param in EmailRelatedRecordsOperations class constructor.
+
 - [3.0.0](/versions/3.0.0/README.md)
    - Added new moveAttachmentsTo field in LeadConverter class.
    - Added new id and name param in GetDownloadAttachmentsDetailsParam class.
@@ -60,10 +70,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-6.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/3.0.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-6-0/3.0.0/zohocrm-java-sdk-6-0-3.0.0.jar)
+- [Gradle](/versions/4.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-6-0/4.0.0/zohocrm-java-sdk-6-0-4.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-6.0/releases/tag/3.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-6.0/releases/tag/4.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -76,7 +86,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-6.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-6-0</artifactId>
-            <version>3.0.0</version>
+            <version>4.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -96,4 +106,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/3.0.0/README.md).
+For more details, kindly refer [here](/versions/4.0.0/README.md).
