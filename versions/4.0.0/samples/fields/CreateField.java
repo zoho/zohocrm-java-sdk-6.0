@@ -22,6 +22,7 @@ import com.zoho.crm.api.fields.External;
 import com.zoho.crm.api.fields.Fields;
 import com.zoho.crm.api.fields.FieldsOperations;
 import com.zoho.crm.api.fields.FieldsOperations.CreateFieldParam;
+import com.zoho.crm.api.fields.PickListValue;
 import com.zoho.crm.api.fields.Profile;
 import com.zoho.crm.api.fields.SuccessResponse;
 import com.zoho.crm.api.dc.DataCenter.Environment;
@@ -35,6 +36,8 @@ public class CreateField
 		FieldsOperations fieldsOperations = new FieldsOperations();
 		BodyWrapper bodyWrapper = new BodyWrapper();
 		List<Fields> fields = new ArrayList<Fields>();
+		
+		/**Sample Input: Field Type - Text*/
 		Fields field = new Fields();
 		field.setFieldLabel("SDK");
 		field.setDisplayLabel("SDK");
@@ -61,6 +64,52 @@ public class CreateField
 		profiles.add(profile);
 		field.setProfiles(profiles);
 		fields.add(field);
+		/** end */
+		
+		/**Sample Input: Field Type - Picklist */
+		Fields picklistfield = new Fields();
+		picklistfield.setFieldLabel("Select Region11");
+		picklistfield.setDataType("picklist");
+		Tooltip toolTip1 = new Tooltip();
+		toolTip1.setName("info_icon");
+		toolTip1.setValue("Select your region here");
+		picklistfield.setTooltip(toolTip1);
+		picklistfield.setLength(120);
+		List<Profile> picklistfieldprofiles = new ArrayList<Profile>();
+		Profile profile1 = new Profile();
+		profile1.setId(3477066011l);
+		profile1.setPermissionType("read_write");
+		picklistfieldprofiles.add(profile1);
+		picklistfield.setProfiles(picklistfieldprofiles);
+		
+		List<PickListValue> picklistvalues = new ArrayList<PickListValue>();
+		PickListValue picklistvalue = new PickListValue();
+		picklistvalue.setDisplayValue("East");
+		picklistvalue.setActualValue("IN_East");
+		picklistvalues.add(picklistvalue);
+		
+		picklistvalue = new PickListValue();
+		picklistvalue.setDisplayValue("West");
+		picklistvalue.setActualValue("IN_West");
+		picklistvalues.add(picklistvalue);
+		
+		picklistvalue = new PickListValue();
+		picklistvalue.setDisplayValue("North");
+		picklistvalue.setActualValue("IN_North");
+		picklistvalues.add(picklistvalue);
+		
+		picklistvalue = new PickListValue();
+		picklistvalue.setDisplayValue("South");
+		picklistvalue.setActualValue("IN_South");
+		picklistvalues.add(picklistvalue);
+		
+		picklistfield.setPickListValues(picklistvalues);
+
+		picklistfield.setPickListValuesSortedLexically(true);
+		picklistfield.setEnableColourCode(true);
+		fields.add(picklistfield);
+		/**end */
+		
 		bodyWrapper.setFields(fields);
 		ParameterMap paramInstance = new ParameterMap();
 		paramInstance.add(CreateFieldParam.MODULE, "Leads");
@@ -135,7 +184,7 @@ public class CreateField
 		try
 		{
 			Environment environment = USDataCenter.PRODUCTION;
-			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").redirectURL("Redirect_URL").build();
+			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").build();
 			new Initializer.Builder().environment(environment).token(token).initialize();
 			String moduleAPIName = "Leads";
 			Long layoutId = 34799001l;
