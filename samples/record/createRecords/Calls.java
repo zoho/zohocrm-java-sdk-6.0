@@ -49,9 +49,9 @@ public class Calls
 		record1.addFieldValue(Field.Calls.CALL_TYPE, new Choice<String>("Outbound"));
 		record1.addFieldValue(Field.Calls.OUTGOING_CALL_STATUS, new Choice<String>("Scheduled"));
 		record1.addFieldValue(Field.Calls.CALL_START_TIME, OffsetDateTime.of(2023, 11, 20, 10, 00, 01, 00, ZoneOffset.of("+05:30")));
-		com.zoho.crm.api.record.Record user = new com.zoho.crm.api.record.Record();
-		user.setId(440248254001L);
-		record1.addKeyValue("Call_Owner", user);
+		com.zoho.crm.api.users.MinifiedUser recordOwner = new com.zoho.crm.api.users.MinifiedUser();
+		recordOwner.setEmail("abcd@zoho.com");
+		record1.addKeyValue("Owner", recordOwner);
 		record1.addFieldValue(Field.Calls.SUBJECT, "call scheduled");
 		record1.addFieldValue(Field.Calls.REMINDER, new Choice<String>("5 mins"));
 		record1.addFieldValue(Field.Calls.CALL_PURPOSE, new Choice<String>("Demo"));
